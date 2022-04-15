@@ -93,11 +93,11 @@ public class Week1Test {
         Flux<String> texts = Flux.just("google", "abc", "fb", "stackoverflow")
                 .log()
                 .subscribeOn(Schedulers.parallel())
-                .filter(o -> o.length() >= 5).repeat(1);
+                .filter(o -> o.length() >= 5).map(o -> o.toUpperCase()).repeat(1);
 
         StepVerifier.create(texts)
-                .expectNext("google").expectNext("stackoverflow")
-                .expectNext("google").expectNext("stackoverflow")
+                .expectNext("GOOGLE").expectNext("STACKOVERFLOW")
+                .expectNext("GOOGLE").expectNext("STACKOVERFLOW")
                 .verifyComplete();
 
     }
