@@ -15,6 +15,9 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class HelloRouter {
     @Bean
     public RouterFunction<ServerResponse> route(HelloHandler helloHandler) {
-        return RouterFunctions.route(GET("/hello").and(accept(MediaType.APPLICATION_JSON)), helloHandler::hello);
+        return RouterFunctions.route()
+                .GET("/hello", helloHandler::hello)
+                .GET("/hello2", helloHandler::hello2)
+                .build();
     }
 }

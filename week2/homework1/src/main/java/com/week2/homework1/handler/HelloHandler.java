@@ -13,6 +13,12 @@ import reactor.core.publisher.Mono;
 public class HelloHandler {
     public Mono<ServerResponse> hello(ServerRequest request) {
         String name = request.queryParam("name").orElse("");
+        Hello hello = new Hello(name, String.format("hello %s", name));
+
+        return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(Mono.just(hello), Hello.class);
+    }
+    public Mono<ServerResponse> hello2(ServerRequest request) {
+        String name = request.queryParam("name").orElse("");
 
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON)
                 .body(BodyInserters.fromValue(new Hello(name, String.format("hello %s", name))));
