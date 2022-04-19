@@ -1,5 +1,6 @@
 package com.week2.homework1;
 
+import com.week2.homework1.model.Hello;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

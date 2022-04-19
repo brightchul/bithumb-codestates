@@ -1,6 +1,7 @@
-package com.week2.homework1;
+package com.week2.homework1.handler;
 
 
+import com.week2.homework1.model.Hello;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;

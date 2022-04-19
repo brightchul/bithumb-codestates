@@ -1,5 +1,6 @@
-package com.week2.homework1;
+package com.week2.homework1.router;
 
+import com.week2.homework1.handler.HelloHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

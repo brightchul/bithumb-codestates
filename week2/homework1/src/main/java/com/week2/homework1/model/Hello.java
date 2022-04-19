@@ -1,4 +1,4 @@
-package com.week2.homework1;
+package com.week2.homework1.model;
 
 
 import lombok.*;
