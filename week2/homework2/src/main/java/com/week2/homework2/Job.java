@@ -1,15 +1,13 @@
-package com.week2.homework1.model;
+package com.week2.homework2;
 
 
 import lombok.*;
-
+//http://info-service/uri?name=
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Hello {
-    private String to;
-    private String message;
+public class Job {
     private String job;
 }

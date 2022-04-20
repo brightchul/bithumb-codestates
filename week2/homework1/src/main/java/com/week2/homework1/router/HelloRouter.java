@@ -17,7 +17,6 @@ public class HelloRouter {
     public RouterFunction<ServerResponse> route(HelloHandler helloHandler) {
         return RouterFunctions.route()
                 .GET("/hello", helloHandler::hello)
-                .GET("/hello2", helloHandler::hello2)
                 .build();
     }
 }
