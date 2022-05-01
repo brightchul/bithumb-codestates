@@ -43,6 +43,11 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>openapi-generator-gradle-plugin</artifactId>
+			<version>5.4.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
